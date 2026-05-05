@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Clash Display font from Fontshare */
+@font-face {
+  font-family: 'Clash Display';
+  src: url('https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap');
+  font-weight: 600 700;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --background: 240 33% 4%;
+    --foreground: 0 0% 100%;
+    --card: 240 24% 11%;
+    --card-foreground: 0 0% 100%;
+    --popover: 240 24% 11%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 17 80% 54%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 20% 9%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 15% 15%;
+    --muted-foreground: 240 10% 55%;
+    --accent: 17 80% 54%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 15% 19%;
+    --input: 240 15% 19%;
+    --ring: 17 80% 54%;
+    --radius: 0.5rem;
+    --sidebar-background: 240 33% 4%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 17 80% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 15% 15%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 15% 19%;
+    --sidebar-ring: 17 80% 54%;
+
+    /* ShowcaseMX custom tokens */
+    --showcase-bg-primary: #0A0A0F;
+    --showcase-bg-secondary: #111118;
+    --showcase-bg-card: #1A1A24;
+    --showcase-bg-elevated: #222230;
+    --showcase-bg-footer: #08080C;
+    --showcase-accent: #E85D2B;
+    --showcase-accent-hover: #F0703D;
+    --showcase-accent-glow: rgba(232, 93, 43, 0.3);
+    --showcase-text-primary: #FFFFFF;
+    --showcase-text-secondary: #A0A0B0;
+    --showcase-text-muted: #6B6B7B;
+    --showcase-border-subtle: #2A2A3A;
+    --showcase-gold: #D4A843;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-showcase-bg-primary text-white font-inter antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--showcase-bg-primary);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--showcase-border-subtle);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--showcase-text-muted);
+  }
+}
+
+@layer utilities {
+  .text-gradient-accent {
+    background: linear-gradient(135deg, #E85D2B 0%, #FF8A5C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #D4A843 0%, #F0D78C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-accent {
+    background: linear-gradient(135deg, #E85D2B 0%, #F0703D 50%, #FF8A5C 100%);
+  }
+
+  .gradient-hero {
+    background: linear-gradient(180deg, rgba(10, 10, 15, 0.3) 0%, rgba(10, 10, 15, 0.7) 60%, #0A0A0F 100%);
+  }
+
+  .gradient-card {
+    background: linear-gradient(180deg, rgba(26, 26, 36, 0) 0%, rgba(26, 26, 36, 0.95) 100%);
+  }
+
+  .gradient-section {
+    background: linear-gradient(180deg, #0A0A0F 0%, #111118 50%, #0A0A0F 100%);
+  }
+
+  .glow-spot {
+    background: var(--showcase-accent-glow);
+    filter: blur(100px);
+    border-radius: 50%;
+  }
+
+  .section-padding {
+    padding-top: clamp(5rem, 10vw, 8rem);
+    padding-bottom: clamp(5rem, 10vw, 8rem);
+  }
+
+  .container-max {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(1.5rem, 5vw, 4rem);
+    padding-right: clamp(1.5rem, 5vw, 4rem);
+  }
+}
