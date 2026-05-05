@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronDown, Calendar, Star, CheckCircle, Mic2, Megaphone, FerrisWheel, Users, Mail } from "lucide-react";
-import { eventos } from "../data/events";
+import { eventosUpcoming } from "../data/events";
 import { artistas } from "../data/artistas";
 import SectionHeader from "../components/SectionHeader";
 import EventoCard from "../components/EventoCard";
 import ArtistaCard from "../components/ArtistaCard";
 
-const eventosDestacados = eventos
+const eventosDestacados = eventosUpcoming
   .filter((e) => e.estadoEvento === "disponible" || e.estadoEvento === "proximamente")
   .slice(0, 6);
 
@@ -188,7 +188,7 @@ export default function Home() {
                 Mas de una decada creando experiencias inolvidables
               </h2>
               <p className="text-showcase-text-secondary leading-relaxed mb-6">
-                ShowcaseMX es una empresa mexicana originaria de Torreon, Coahuila, especializada en la produccion, promocion y organizacion de conciertos, ferias, eventos culturales, deportivos y especiales. Hemos llevado a escenarios de todo Mexico a artistas internacionales como Shakira, Guns N' Roses y Andrea Bocelli.
+                Showcase Entretenimiento es una empresa mexicana originaria de Torreon, Coahuila, especializada en la produccion, promocion y organizacion de conciertos, ferias, eventos culturales, deportivos y especiales. Hemos llevado a escenarios de todo Mexico a artistas internacionales como Shakira, Guns N' Roses y Andrea Bocelli.
               </p>
 
               {/* Metrics */}
@@ -256,7 +256,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ========== FERIA TORREON ========== */}
+      {/* ========== AQUI VA EL BLOQUE DE FERIA TORREON ========== */}
+      {false && (
       <section className="section-padding gradient-section">
         <div className="container-max">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -335,6 +336,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      )}
 
       {/* ========== SERVICIOS PREVIEW ========== */}
       <section className="section-padding bg-showcase-bg-secondary">
@@ -383,6 +385,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+       
 
       {/* ========== CTA FINAL ========== */}
       <section className="relative overflow-hidden" style={{ padding: "clamp(6rem, 12vw, 10rem) 0" }}>

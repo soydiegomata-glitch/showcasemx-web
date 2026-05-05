@@ -9,6 +9,7 @@ export interface Evento {
   estado: string;
   imagen: string;
   linkBoletos: string;
+  status: "upcoming" | "past" | "cancelled";
   plataforma: string;
   estadoEvento: "disponible" | "proximamente" | "agotado" | "pospuesto";
   genero: string;
@@ -30,6 +31,7 @@ export const eventos: Evento[] = [
     estadoEvento: "disponible",
     genero: "Regional Mexicano",
     descripcion: "De Sonora Para El Mundo Tour",
+    status: "past",
   },
   {
     id: 2,
@@ -45,6 +47,7 @@ export const eventos: Evento[] = [
     estadoEvento: "disponible",
     genero: "Regional Mexicano",
     descripcion: "Triste Pero Bien Cabrón Tour",
+    status: "upcoming",
   },
   {
     id: 3,
@@ -55,11 +58,12 @@ export const eventos: Evento[] = [
     ciudad: "Torreón",
     estado: "Coah.",
     imagen: "/event-myke-towers-trc.jpg",
-    linkBoletos: "https://boletea.com",
+    linkBoletos: "https://boletea.com/evento/miketowers_torreon",
     plataforma: "Boletea",
     estadoEvento: "disponible",
     genero: "Urbano",
     descripcion: "México Tour 2026",
+    status: "upcoming",
   },
   {
     id: 4,
@@ -70,11 +74,12 @@ export const eventos: Evento[] = [
     ciudad: "Cancún",
     estado: "Q.Roo",
     imagen: "/event-myke-towers-cun.jpg",
-    linkBoletos: "https://boletea.com",
+    linkBoletos: "https://boletea.com/evento/MykeTowers_Cancun",
     plataforma: "Boletea",
     estadoEvento: "disponible",
     genero: "Urbano",
     descripcion: "México Tour 2026",
+    status: "upcoming",
   },
   {
     id: 5,
@@ -85,11 +90,12 @@ export const eventos: Evento[] = [
     ciudad: "Torreón",
     estado: "Coah.",
     imagen: "/event-julieta-venegas.jpg",
-    linkBoletos: "https://boletea.com",
+    linkBoletos: "https://boletea.com/evento/julietavenegastorreon",
     plataforma: "Boletea",
     estadoEvento: "disponible",
     genero: "Pop",
     descripcion: "Norteña Tour 2026",
+    status: "upcoming",
   },
   {
     id: 6,
@@ -105,6 +111,7 @@ export const eventos: Evento[] = [
     estadoEvento: "disponible",
     genero: "Regional Mexicano",
     descripcion: "Tour Clase Maestra",
+    status: "upcoming",
   },
   {
     id: 7,
@@ -120,6 +127,7 @@ export const eventos: Evento[] = [
     estadoEvento: "disponible",
     genero: "Regional Mexicano",
     descripcion: "Tour Clase Maestra",
+    status: "upcoming",
   },
   {
     id: 8,
@@ -135,6 +143,7 @@ export const eventos: Evento[] = [
     estadoEvento: "disponible",
     genero: "Pop",
     descripcion: "Vida México Tour",
+    status: "upcoming",
   },
   {
     id: 9,
@@ -150,13 +159,13 @@ export const eventos: Evento[] = [
     estadoEvento: "proximamente",
     genero: "Pop",
     descripcion: "Entre Tanta Gente Tour",
+    status: "upcoming",
   },
   {
     id: 10,
     artista: "Humbe",
     fecha: "26 Septiembre 2026",
     fechaObj: new Date("2026-09-26"),
-    hora: "9:00 PM",
     recinto: "Coliseo Centenario",
     ciudad: "Torreón",
     estado: "Coah.",
@@ -166,6 +175,7 @@ export const eventos: Evento[] = [
     estadoEvento: "disponible",
     genero: "Pop",
     descripcion: "Dueño Del Cielo Tour",
+    status: "upcoming",
   },
   {
     id: 11,
@@ -181,6 +191,7 @@ export const eventos: Evento[] = [
     estadoEvento: "proximamente",
     genero: "Pop",
     descripcion: "Lo Que El Seco No Dijo",
+    status: "past",
   },
   {
     id: 12,
@@ -195,6 +206,7 @@ export const eventos: Evento[] = [
     plataforma: "Boletea",
     estadoEvento: "disponible",
     genero: "Regional Mexicano",
+    status: "past",
   },
   {
     id: 13,
@@ -210,6 +222,7 @@ export const eventos: Evento[] = [
     estadoEvento: "disponible",
     genero: "Regional Mexicano",
     descripcion: "La Lotería Tour",
+    status: "past",
   },
   {
     id: 14,
@@ -225,6 +238,7 @@ export const eventos: Evento[] = [
     estadoEvento: "proximamente",
     genero: "Pop",
     descripcion: "Tour México 2026",
+    status: "upcoming",
   },
   {
     id: 15,
@@ -240,6 +254,7 @@ export const eventos: Evento[] = [
     estadoEvento: "proximamente",
     genero: "Pop",
     descripcion: "Tour México 2026",
+    status: "upcoming",
   },
   {
     id: 16,
@@ -256,6 +271,7 @@ export const eventos: Evento[] = [
     estadoEvento: "disponible",
     genero: "Evento Deportivo",
     descripcion: "Juan Ma Ibarra & Julio Romero",
+    status: "past",
   },
   {
     id: 17,
@@ -271,6 +287,7 @@ export const eventos: Evento[] = [
     estadoEvento: "disponible",
     genero: "Feria",
     descripcion: "Ha*Ash, Matisse, Duelo, Bronco, Edith Márquez, Juntos, Pesado",
+    status: "past",
   },
   {
     id: 18,
@@ -285,6 +302,7 @@ export const eventos: Evento[] = [
     plataforma: "",
     estadoEvento: "proximamente",
     genero: "Regional Mexicano",
+    status: "upcoming",
   },
   {
     id: 19,
@@ -299,6 +317,7 @@ export const eventos: Evento[] = [
     plataforma: "",
     estadoEvento: "proximamente",
     genero: "Regional Mexicano",
+    status: "upcoming",
   },
   {
     id: 20,
@@ -313,10 +332,13 @@ export const eventos: Evento[] = [
     plataforma: "",
     estadoEvento: "proximamente",
     genero: "Evento Especial",
+    status: "upcoming",
   },
 ];
 
-export const ciudades = [...new Set(eventos.map((e) => e.ciudad))].sort();
+export const eventosUpcoming = eventos.filter((e) => e.status === "upcoming");
+export const eventosPast = eventos.filter((e) => e.status === "past");
+export const ciudades = [...new Set(eventosUpcoming.map((e) => e.ciudad))].sort();
 export const meses = [
   "Todos",
   "Febrero",

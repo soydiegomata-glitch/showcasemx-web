@@ -10,7 +10,7 @@ const navLinks = [
   { path: "/galeria", label: "Galería" },
   { path: "/nosotros", label: "Nosotros" },
   { path: "/servicios", label: "Servicios" },
-  { path: "/feria-torreon", label: "Feria Torreón" },
+  // { path: "/feria-torreon", label: "Feria Torreón" },,
   { path: "/contacto", label: "Contacto" },
 ];
 

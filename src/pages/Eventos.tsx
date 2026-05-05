@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, SearchX } from "lucide-react";
-import { eventos, ciudades, generos } from "../data/events";
+import { eventosUpcoming, ciudades, generos } from "../data/events";
 import PageHero from "../components/PageHero";
 import EventoCard from "../components/EventoCard";
 
@@ -11,7 +11,7 @@ export default function Eventos() {
   const [busqueda, setBusqueda] = useState("");
 
   const eventosFiltrados = useMemo(() => {
-    return eventos.filter((evento) => {
+    return eventosUpcoming.filter((evento) => {
       const matchCiudad = ciudadFilter === "Todas" || evento.ciudad === ciudadFilter;
       const matchGenero = generoFilter === "Todos" || evento.genero === generoFilter;
       const matchBusqueda =
