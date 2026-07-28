@@ -9,6 +9,7 @@ import Nosotros from "./pages/Nosotros";
 import Servicios from "./pages/Servicios";
 import FeriaTorreon from "./pages/FeriaTorreon";
 import Contacto from "./pages/Contacto";
+import Legal from "./pages/Legal";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -34,6 +35,8 @@ function App() {
             <Route path="/servicios" element={<Servicios />} />
             <Route path="/feria-torreon" element={<FeriaTorreon />} />
             <Route path="/contacto" element={<Contacto />} />
+            <Route path="/aviso-de-privacidad" element={<Legal type="privacy" />} />
+            <Route path="/terminos-y-condiciones" element={<Legal type="terms" />} />
           </Route>
         </Routes>
       </AnimatePresence>

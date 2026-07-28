@@ -110,12 +110,12 @@ export default function Footer() {
               © 2026 Showcase Entretenimiento. Todos los derechos reservados.
             </p>
             <div className="flex items-center gap-4 text-xs text-showcase-text-muted">
-              <span className="hover:text-showcase-text-secondary cursor-pointer transition-colors">
+              <Link to="/aviso-de-privacidad" className="hover:text-showcase-text-secondary transition-colors">
                 Aviso de Privacidad
-              </span>
-              <span className="hover:text-showcase-text-secondary cursor-pointer transition-colors">
+              </Link>
+              <Link to="/terminos-y-condiciones" className="hover:text-showcase-text-secondary transition-colors">
                 Terminos y Condiciones
-              </span>
+              </Link>
             </div>
           </div>
         </div>

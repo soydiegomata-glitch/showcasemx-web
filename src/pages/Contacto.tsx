@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import {
-  Mail, Phone, MessageCircle, MapPin, Clock,
+  Mail, MapPin, Clock,
   Instagram, Facebook, Youtube, Twitter,
   Mic2, Briefcase, Newspaper, Send,
 } from "lucide-react";
@@ -16,6 +16,8 @@ const tiposSolicitud = [
   "Información general",
   "Otro",
 ];
+
+const contactEmail = "eventosshowcase@gmail.com";
 
 const contactosEspecializados = [
   {
@@ -39,7 +41,9 @@ const contactosEspecializados = [
 ];
 
 export default function Contacto() {
-  const [formState, setFormState] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [formState, setFormState] = useState<"idle" | "success">("idle");
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [newsletterState, setNewsletterState] = useState<"idle" | "success">("idle");
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
@@ -51,11 +55,27 @@ export default function Contacto() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setFormState("sending");
-    // Simulate sending
-    setTimeout(() => {
-      setFormState("success");
-    }, 1500);
+    const subject = encodeURIComponent(`Contacto web: ${formData.tipo || "Consulta general"}`);
+    const body = encodeURIComponent([
+      `Nombre: ${formData.nombre}`,
+      `Correo: ${formData.email}`,
+      `Teléfono: ${formData.telefono || "No proporcionado"}`,
+      `Empresa: ${formData.empresa || "No proporcionada"}`,
+      `Tipo de solicitud: ${formData.tipo}`,
+      "",
+      "Mensaje:",
+      formData.mensaje,
+    ].join("\n"));
+    window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
+    setFormState("success");
+  };
+
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = encodeURIComponent("Suscripción a novedades Showcase");
+    const body = encodeURIComponent(`Quiero recibir novedades de Showcase en: ${newsletterEmail}`);
+    window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
+    setNewsletterState("success");
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -95,10 +115,10 @@ export default function Contacto() {
                     <Send className="w-8 h-8 text-green-400" />
                   </div>
                   <h3 className="font-clash font-semibold text-xl text-white mb-2">
-                    Mensaje enviado!
+                    Abriendo tu correo
                   </h3>
                   <p className="text-showcase-text-secondary">
-                    Te contactaremos pronto.
+                    Preparamos tu mensaje en tu aplicación de correo. Envíalo desde ahí para que podamos responderte.
                   </p>
                 </div>
               ) : (
@@ -198,15 +218,10 @@ export default function Contacto() {
 
                   <button
                     type="submit"
-                    disabled={formState === "sending"}
-                    className="w-full flex items-center justify-center gap-2 gradient-accent text-white font-semibold py-3.5 rounded-lg hover:shadow-glow transition-all duration-300 hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full flex items-center justify-center gap-2 gradient-accent text-white font-semibold py-3.5 rounded-lg hover:shadow-glow transition-all duration-300 hover:scale-[1.02]"
                   >
-                    {formState === "sending" ? (
-                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                    ) : (
-                      <Send className="w-5 h-5" />
-                    )}
-                    {formState === "sending" ? "Enviando..." : "Enviar mensaje"}
+                    <Send className="w-5 h-5" />
+                    Preparar mensaje
                   </button>
                 </form>
               )}
@@ -228,29 +243,9 @@ export default function Contacto() {
                     </div>
                     <div>
                       <span className="text-showcase-text-muted text-xs uppercase tracking-wider">Correo electrónico</span>
-                      <a href="mailto:eventosshowcase@gmail.com" className="block text-white hover:text-showcase-accent transition-colors">
-                        Por confirmar
+                      <a href={`mailto:${contactEmail}`} className="block text-white hover:text-showcase-accent transition-colors">
+                        {contactEmail}
                       </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-showcase-accent/10 flex items-center justify-center shrink-0">
-                      <Phone className="w-5 h-5 text-showcase-accent" />
-                    </div>
-                    <div>
-                      <span className="text-showcase-text-muted text-xs uppercase tracking-wider">Teléfono</span>
-                      <p className="text-showcase-text-secondary">Por confirmar</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-showcase-accent/10 flex items-center justify-center shrink-0">
-                      <MessageCircle className="w-5 h-5 text-showcase-accent" />
-                    </div>
-                    <div>
-                      <span className="text-showcase-text-muted text-xs uppercase tracking-wider">WhatsApp</span>
-                      <p className="text-showcase-text-secondary">Disponible próximamente</p>
                     </div>
                   </div>
 
@@ -300,17 +295,6 @@ export default function Contacto() {
                   </div>
                 </div>
 
-                {/* Corporate emails suggestion */}
-                <div className="border-t border-showcase-border-subtle mt-6 pt-6">
-                  <span className="text-showcase-text-muted text-xs uppercase tracking-wider block mb-3">
-                    Emails corporativos
-                  </span>
-                  <div className="space-y-1.5">
-                    {["contacto@showcasemx.com", "comercial@showcasemx.com", "prensa@showcasemx.com"].map((email) => (
-                      <p key={email} className="text-showcase-text-muted text-xs">{email}</p>
-                    ))}
-                  </div>
-                </div>
               </div>
             </motion.div>
           </div>
@@ -347,7 +331,7 @@ export default function Contacto() {
                   {contacto.text}
                 </p>
                 <a
-                  href="mailto:eventosshowcase@gmail.com"
+                  href={`mailto:${contactEmail}`}
                   className="inline-flex items-center gap-2 border-[1.5px] border-showcase-accent text-showcase-accent text-sm font-medium px-4 py-2 rounded-lg hover:bg-showcase-accent hover:text-white transition-all duration-300"
                 >
                   {contacto.cta}
@@ -377,9 +361,12 @@ export default function Contacto() {
                 </p>
               </div>
               <div>
-                <form className="flex flex-col sm:flex-row gap-3" onSubmit={(e) => e.preventDefault()}>
+                <form className="flex flex-col sm:flex-row gap-3" onSubmit={handleNewsletterSubmit}>
                   <input
                     type="email"
+                    required
+                    value={newsletterEmail}
+                    onChange={(e) => setNewsletterEmail(e.target.value)}
                     placeholder="tu@email.com"
                     className="flex-1 bg-showcase-bg-primary border border-showcase-border-subtle rounded-lg px-4 py-3 text-white placeholder:text-showcase-text-muted focus:outline-none focus:border-showcase-accent transition-colors"
                   />
@@ -391,7 +378,9 @@ export default function Contacto() {
                   </button>
                 </form>
                 <p className="text-showcase-text-muted text-xs mt-3">
-                  Sin spam. Puedes darte de baja en cualquier momento.
+                  {newsletterState === "success"
+                    ? "Preparamos tu solicitud de suscripción en tu correo. Envíala para confirmarla."
+                    : "Tu correo se abrirá para que confirmes la suscripción."}
                 </p>
               </div>
             </div>
@@ -399,19 +388,6 @@ export default function Contacto() {
         </div>
       </section>
 
-      {/* Map */}
-      <section className="h-80 lg:h-96 bg-showcase-bg-secondary">
-        <iframe
-          title="Ubicacion Showcase Entretenimiento"
-          src="https://maps.app.goo.gl/cDiJGjKfkrAPV3fR9"
-          width="100%"
-          height="100%"
-          style={{ border: 0, filter: "grayscale(100%) invert(92%) contrast(83%)" }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
-      </section>
     </div>
   );
 }

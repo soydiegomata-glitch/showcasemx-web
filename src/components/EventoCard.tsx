@@ -40,12 +40,18 @@ export default function EventoCard({ evento, index = 0 }: EventoCardProps) {
     >
       {/* Image */}
       <div className="relative aspect-[4/3] overflow-hidden">
-        <img
-          src={evento.imagen}
-          alt={`Concierto de ${evento.artista} en ${evento.recinto}`}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          loading="lazy"
-        />
+        {evento.imagen ? (
+          <img
+            src={evento.imagen}
+            alt={`Concierto de ${evento.artista} en ${evento.recinto}`}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+          />
+        ) : (
+          <div className="flex h-full w-full items-end bg-gradient-to-br from-showcase-bg-elevated via-showcase-bg-card to-showcase-accent/40 p-5">
+            <span className="font-clash text-2xl font-bold leading-tight text-white">{evento.artista}</span>
+          </div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-showcase-bg-card via-transparent to-transparent" />
         
         {/* Date Badge */}
@@ -92,14 +98,14 @@ export default function EventoCard({ evento, index = 0 }: EventoCardProps) {
             className="flex items-center justify-center gap-2 w-full py-2.5 border-[1.5px] border-showcase-accent text-showcase-accent rounded-lg text-sm font-semibold hover:bg-showcase-accent hover:text-white transition-all duration-300"
           >
             <ExternalLink className="w-4 h-4" />
-            Comprar Boletos
+            Comprar boletos
           </a>
         ) : (
           <button
             disabled
             className="flex items-center justify-center gap-2 w-full py-2.5 border-[1.5px] border-showcase-border-subtle text-showcase-text-muted rounded-lg text-sm font-semibold cursor-not-allowed"
           >
-            Boletos pronto
+            Boletos no disponibles
           </button>
         )}
 

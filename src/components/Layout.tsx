@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import { motion } from "framer-motion";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import CookieBanner from "./CookieBanner";
 
 export default function Layout() {
   return (
@@ -16,6 +17,7 @@ export default function Layout() {
         <Outlet />
       </motion.main>
       <Footer />
+      <CookieBanner />
     </div>
   );
 }

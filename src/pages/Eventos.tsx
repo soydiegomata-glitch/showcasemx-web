@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, SearchX } from "lucide-react";
 import { eventosUpcoming, ciudades, generos } from "../data/events";
@@ -128,12 +129,12 @@ export default function Eventos() {
             <p className="text-showcase-text-secondary mb-6">
               Contactanos y te ayudamos a encontrar el evento perfecto.
             </p>
-            <a
-              href="/contacto"
+            <Link
+              to="/contacto"
               className="inline-flex gradient-accent text-white font-semibold px-6 py-3 rounded-lg hover:shadow-glow transition-all duration-300 hover:scale-[1.02]"
             >
               Contactar a Showcase
-            </a>
+            </Link>
           </motion.div>
         </div>
       </section>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ChevronDown, Calendar, Star, CheckCircle, Mic2, Megaphone, FerrisWheel, Users, Mail } from "lucide-react";
+import { ChevronDown, Calendar, Mic2, Megaphone, FerrisWheel, Users, Mail } from "lucide-react";
 import { eventosUpcoming } from "../data/events";
 import { artistas } from "../data/artistas";
 import SectionHeader from "../components/SectionHeader";
@@ -255,88 +255,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
-      {/* ========== AQUI VA EL BLOQUE DE FERIA TORREON ========== */}
-      {false && (
-      <section className="section-padding gradient-section">
-        <div className="container-max">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            {/* Text */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-            >
-              <div className="flex items-center gap-2 mb-3">
-                <Star className="w-4 h-4 text-showcase-gold" />
-                <span className="text-xs font-semibold tracking-[0.15em] uppercase text-showcase-gold">
-                  EVENTO ESPECIAL
-                </span>
-              </div>
-              <h2 className="font-clash font-bold text-white leading-tight mb-2" style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}>
-                Feria Torreón <span className="text-gradient-gold">2025</span>
-              </h2>
-              <p className="text-showcase-text-secondary mb-4">
-                79ª Edición — 5 de septiembre al 5 de octubre
-              </p>
-              <p className="text-showcase-text-secondary leading-relaxed mb-6">
-                Un mes completo de música, diversión, gastronomía y tradición en el corazón de La Laguna. Conciertos gratuitos con tu boleto de feria, espectáculos de paga con los mejores artistas, juegos mecánicos, gastronomía y actividades para toda la familia.
-              </p>
-
-              <ul className="space-y-3 mb-8">
-                {[
-                  "Conciertos gratuitos: Liberacion, El Poder del Norte, Chicos de Barrio",
-                  "Espectaculos de paga: Josi Cuen & Jorge Medina, Bely y Beto, Virlan Garcia",
-                  "Entrada solo $50, ninos y adultos mayores gratis",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-showcase-accent shrink-0 mt-0.5" />
-                    <span className="text-showcase-text-secondary text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  to="/feria-torreon"
-                  className="gradient-accent text-white font-semibold px-6 py-3 rounded-lg hover:shadow-glow transition-all duration-300 hover:scale-[1.02]"
-                >
-                  Conoce toda la cartelera
-                </Link>
-                <a
-                  href="https://boletea.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border-[1.5px] border-showcase-accent text-showcase-accent font-semibold px-6 py-3 rounded-lg hover:bg-showcase-accent hover:text-white transition-all duration-300"
-                >
-                  Comprar boletos
-                </a>
-              </div>
-            </motion.div>
-
-            {/* Image */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="absolute -inset-4 bg-showcase-accent/10 rounded-3xl blur-2xl" />
-              <div className="relative rounded-2xl overflow-hidden shadow-card-hover">
-                <img
-                  src="/feria-torreon.jpg"
-                  alt="Feria Torreón 2025"
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
-                />
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-      )}
 
       {/* ========== SERVICIOS PREVIEW ========== */}
       <section className="section-padding bg-showcase-bg-secondary">
