@@ -27,8 +27,8 @@ export default function Eventos() {
     <div>
       <PageHero
         label="SHOWCASEMX"
-        title="Proximos Eventos"
-        subtitle="Descubre los conciertos, ferias y espectaculos que tenemos para ti."
+        title="Próximos Eventos"
+        subtitle="Descubre los conciertos, ferias y espectáculos que tenemos para ti."
         height="50vh"
       />
 

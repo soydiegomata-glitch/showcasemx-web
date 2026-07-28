@@ -4,7 +4,7 @@ import PageHero from "../components/PageHero";
 import SectionHeader from "../components/SectionHeader";
 
 const hitos = [
-  { year: "2013", text: "Fundacion de Showcase Entretenimiento en Torreon, Coahuila." },
+  { year: "2013", text: "Fundación de Showcase Entretenimiento en Torreón, Coahuila." },
   { year: "2016", text: "Primer concierto de nivel internacional en el Coliseo Centenario." },
   { year: "2019", text: "Ano record: mas de 30 eventos producidos, incluyendo Chayanne, Morat, Babasonicos y Maluma." },
   { year: "2020", text: "Adaptacion a nuevos formatos durante la pandemia, manteniendo la conexion con el publico." },
@@ -22,12 +22,12 @@ const valores = [
 ];
 
 const recintos = [
-  { nombre: "Coliseo Centenario", ciudad: "Torreon, Coah.", capacidad: "8,000 personas", imagen: "/about-arena.jpg" },
-  { nombre: "Explanada de la Feria", ciudad: "Torreon, Coah.", capacidad: "12,000 personas", imagen: "/hero-concert.jpg" },
-  { nombre: "Estadio de Beisbol", ciudad: "Torreon, Coah.", capacidad: "7,000 personas", imagen: "/about-arena.jpg" },
-  { nombre: "Poliforum Torreon", ciudad: "Torreon, Coah.", capacidad: "5,000 personas", imagen: "/hero-concert.jpg" },
-  { nombre: "Plaza de Toros", ciudad: "Torreon & Cancun", capacidad: "4,000-6,000", imagen: "/about-arena.jpg" },
-  { nombre: "Estadio TSM", ciudad: "Torreon, Coah.", capacidad: "30,000 personas", imagen: "/hero-concert.jpg" },
+  { nombre: "Coliseo Centenario", ciudad: "Torreón, Coah.", capacidad: "8,000 personas", imagen: "/about-arena.jpg" },
+  { nombre: "Explanada de la Feria", ciudad: "Torreón, Coah.", capacidad: "12,000 personas", imagen: "/hero-concert.jpg" },
+  { nombre: "Estadio de Beisbol", ciudad: "Torreón, Coah.", capacidad: "7,000 personas", imagen: "/about-arena.jpg" },
+  { nombre: "Poliforum Torreón", ciudad: "Torreón, Coah.", capacidad: "5,000 personas", imagen: "/hero-concert.jpg" },
+  { nombre: "Plaza de Toros", ciudad: "Torreón & Cancún", capacidad: "4,000-6,000", imagen: "/about-arena.jpg" },
+  { nombre: "Estadio TSM", ciudad: "Torreón, Coah.", capacidad: "30,000 personas", imagen: "/hero-concert.jpg" },
 ];
 
 export default function Nosotros() {
@@ -69,20 +69,20 @@ export default function Nosotros() {
                 NUESTRA HISTORIA
               </span>
               <h2 className="font-clash font-semibold text-2xl lg:text-3xl text-white leading-tight mb-6">
-                De Torreon para todo Mexico
+                De Torreón para todo México
               </h2>
               <div className="space-y-4 text-showcase-text-secondary leading-relaxed">
                 <p>
-                  Showcase Entretenimiento nacio en Torreon, Coahuila, hace mas de una decada con una mision clara: llevar el mejor entretenimiento a la Comarca Lagunera y mas alla.
+                  Showcase Entretenimiento nació en Torreón, Coahuila, hace más de una década con una misión clara: llevar el mejor entretenimiento a la Comarca Lagunera y más allá.
                 </p>
                 <p>
-                  Lo que comenzo como una pequena promotora local se ha convertido en una de las empresas de entretenimiento mas importantes del norte de Mexico, operando recintos emblematicos como el Coliseo Centenario, la Explanada de la Feria y el Estadio de Beisbol.
+                  Lo que comenzó como una pequeña promotora local se ha convertido en una de las empresas de entretenimiento más importantes del norte de México, operando recintos emblemáticos como el Coliseo Centenario, la Explanada de la Feria de Torreón y el Estadio Revolución.
                 </p>
                 <p>
-                  Bajo la direccion de Jorge Mata, Showcase ha producido eventos que han reunido a mas de 30,000 personas en una sola noche y ha llevado a escenarios laguneros a artistas de la talla de Guns N' Roses, Andrea Bocelli, Caifanes, Morat y cientos mas.
+                  Bajo la dirección de Jorge Mata, Showcase Entretenimiento ha producido eventos que han reunido a más de 30,000 personas en una sola noche y ha llevado a escenarios laguneros a artistas de la talla de Guns N' Roses, Andrea Bocelli, Caifanes, Morat y cientos más.
                 </p>
                 <p>
-                  Hoy, ShowcaseMX no solo produce conciertos, sino que organiza ferias completas, eventos deportivos, espectaculos culturales y experiencias corporativas, con una vision de expansion que ya contempla escenarios internacionales.
+                  Hoy, Showcase Entretenimiento no solo produce conciertos, sino que organiza carteleras de ferias completas, eventos deportivos, espectáculos culturales y experiencias corporativas, con una visión de expansión que ya contempla escenarios internacionales.
                 </p>
               </div>
             </motion.div>
@@ -129,7 +129,7 @@ export default function Nosotros() {
                 Nuestra Vision
               </h3>
               <p className="text-showcase-text-secondary text-sm leading-relaxed">
-                Ser la promotora de entretenimiento mas importante de Mexico, reconocida por la calidad de nuestros eventos, la innovacion en produccion y el alcance internacional.
+                Ser la promotora de entretenimiento más importante de México, reconocida por la calidad de nuestros eventos, la innovación en producción y el alcance internacional.
               </p>
             </motion.div>
 

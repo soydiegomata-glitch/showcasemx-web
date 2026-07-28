@@ -13,10 +13,10 @@ export default function Galeria() {
   }, [categoria]);
 
   const estadisticas = [
-    { numero: "200+", label: "Eventos producidos" },
+    { numero: "500+", label: "Eventos producidos" },
     { numero: "50+", label: "Artistas internacionales" },
-    { numero: "15+", label: "Ciudades en Mexico" },
-    { numero: "30K", label: "Record de asistencia" },
+    { numero: "15+", label: "Ciudades en México" },
+    { numero: "30K", label: "Récord de asistencia" },
   ];
 
   return (
@@ -24,7 +24,7 @@ export default function Galeria() {
       <PageHero
         label="TRAYECTORIA"
         title="Galeria de Eventos"
-        subtitle="Mas de una decada llevando los mejores espectaculos a escenarios de todo Mexico."
+        subtitle="Más de una década llevando los mejores espectáculos a escenarios de todo México."
         height="50vh"
       />
 

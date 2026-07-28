@@ -50,8 +50,8 @@ const conciertosPaga = [
 
 const infoCards = [
   { icon: Clock, title: "Horarios", lines: ["Lunes a jueves: 5:00 PM – 12:00 AM", "Viernes a domingo: 5:00 PM – 2:00 AM"] },
-  { icon: Ticket, title: "Precios de Entrada", lines: ["Adultos: $50", "Ninos menores de 10: GRATIS", "Adultos mayores: GRATIS"] },
-  { icon: MapPin, title: "Ubicacion", lines: ["Recinto Ferial de Torreon", "Torreon, Coahuila, Mexico"] },
+  { icon: Ticket, title: "Precios de Entrada", lines: ["Adultos: $50", "Niños menores de 10: GRATIS", "Adultos mayores: GRATIS"] },
+  { icon: MapPin, title: "Ubicación", lines: ["Recinto Ferial de Torreón", "Torreón, Coahuila, México"] },
   { icon: Calendar, title: "Fechas", lines: ["5 de septiembre al 5 de octubre 2025"] },
 ];
 
@@ -159,7 +159,7 @@ export default function FeriaTorreon() {
           >
             Feria
             <br />
-            <span className="text-gradient-gold">Torreon</span>
+            <span className="text-gradient-gold">Torreón</span>
             <br />
             2025
           </motion.h1>
@@ -208,7 +208,7 @@ export default function FeriaTorreon() {
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4 text-showcase-gold" />
-              Recinto Ferial, Torreon
+              Recinto Ferial, Torreón
             </div>
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4 text-showcase-gold" />
@@ -239,7 +239,7 @@ export default function FeriaTorreon() {
             >
               <img
                 src="/feria-torreon.jpg"
-                alt="Feria Torreon"
+                alt="Feria Torreón"
                 className="w-full h-auto object-cover"
                 loading="lazy"
               />
@@ -252,13 +252,13 @@ export default function FeriaTorreon() {
               transition={{ delay: 0.2 }}
             >
               <span className="text-xs font-semibold tracking-[0.15em] uppercase text-showcase-accent mb-3 block">
-                LA FERIA MAS ESPERADA DEL ANO
+                LA FERIA MÁS ESPERADA DEL AÑO
               </span>
               <h2 className="font-clash font-semibold text-2xl lg:text-3xl text-white leading-tight mb-4">
-                Una tradicion que une a la familia lagunera
+                Una tradición que une a la familia lagunera
               </h2>
               <p className="text-showcase-text-secondary leading-relaxed mb-6">
-                La Feria de Torreon es mucho mas que un evento: es una tradicion que reune a familias de toda la region para celebrar lo mejor de nuestra cultura. Durante un mes completo, el Recinto Ferial se llena de musica, gastronomia, juegos mecanicos, exposiciones y espectaculos para todas las edades.
+                La Feria de Torreón es mucho más que un evento: es una tradición que reúne a familias de toda la región para celebrar lo mejor de nuestra cultura. Durante un mes completo, el Recinto Ferial se llena de música, gastronomía, juegos mecánicos, exposiciones y espectáculos para todas las edades.
               </p>
 
               <div className="grid grid-cols-3 gap-4">
@@ -402,7 +402,7 @@ export default function FeriaTorreon() {
         <div className="container-max">
           <SectionHeader
             label="TODO LO QUE NECESITAS SABER"
-            title="Informacion de la Feria"
+            title="Información de la Feria"
           />
 
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -489,10 +489,10 @@ export default function FeriaTorreon() {
             viewport={{ once: true }}
           >
             <h2 className="font-clash font-bold text-white mb-4" style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)" }}>
-              Te esperamos en la Feria Torreon 2025!
+              Te esperamos en la Feria Torreón 2025!
             </h2>
             <p className="text-showcase-text-secondary text-lg mb-8">
-              5 de septiembre al 5 de octubre — Recinto Ferial, Torreon, Coah.
+              5 de septiembre al 5 de octubre — Recinto Ferial, Torreón, Coah.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a

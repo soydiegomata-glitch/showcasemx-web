@@ -9,19 +9,19 @@ import SectionHeader from "../components/SectionHeader";
 const serviciosPrincipales = [
   {
     icon: Mic2,
-    title: "Produccion de Conciertos",
-    desc: "Conceptualizacion, produccion tecnica, logistica y ejecucion de conciertos de cualquier escala. Desde el artista mas intimo hasta festivales masivos.",
+    title: "Producción de Conciertos",
+    desc: "Conceptualización, producción técnica, logística y ejecución de conciertos de cualquier escala. Desde el artista más íntimo hasta festivales masivos.",
     includes: [
-      "Produccion tecnica (sonido, iluminacion, video)",
-      "Logistica y montaje",
-      "Coordinacion de artistas y crew",
-      "Personal de produccion",
+      "Producción técnica (sonido, iluminación, video)",
+      "Logística y montaje",
+      "Coordinación de artistas y crew",
+      "Personal de producción",
       "Permisos y gestoria",
     ],
   },
   {
     icon: Megaphone,
-    title: "Promocion de Espectaculos",
+    title: "Promoción de Espectáculos",
     desc: "Estrategias de marketing integral para maximizar el alcance, la visibilidad y la venta de boletos de tu evento.",
     includes: [
       "Campanas digitales (redes sociales, SEM)",
@@ -33,11 +33,11 @@ const serviciosPrincipales = [
   },
   {
     icon: FerrisWheel,
-    title: "Organizacion de Ferias",
-    desc: "Planeacion, coordinacion y operacion completa de ferias municipales, estatales y regionales.",
+    title: "Organización de Ferias",
+    desc: "Planeación, coordinación y operación completa de ferias municipales, estatales y regionales.",
     includes: [
       "Planeacion integral del evento",
-      "Contratacion de artistas y espectaculos",
+      "Contratación de artistas y espectáculos",
       "Gestion de recinto y seguridad",
       "Coordinacion de proveedores",
       "Operacion de taquillas y accesos",
@@ -48,17 +48,17 @@ const serviciosPrincipales = [
 const serviciosAdicionales = [
   { icon: Palette, title: "Eventos Culturales", desc: "Festivales, exposiciones, presentaciones artisticas y eventos comunitarios que enriquecen la vida cultural de la region." },
   { icon: Trophy, title: "Eventos Deportivos", desc: "Organizacion de eventos deportivos masivos, incluyendo jaripeos, novilladas, peleas y competencias." },
-  { icon: Users, title: "Contratacion de Artistas", desc: "Relacion directa con artistas nacionales e internacionales de todos los generos musicales." },
-  { icon: Truck, title: "Operacion y Logistica", desc: "Gestion integral de recintos, permisos, seguridad, servicios auxiliares y todo lo necesario para tu evento." },
-  { icon: TrendingUp, title: "Marketing y Difusion", desc: "Campanas digitales, redes sociales, relaciones publicas y medios tradicionales para posicionar tu evento." },
+  { icon: Users, title: "Contratación de Artistas", desc: "Relación directa con artistas nacionales e internacionales de todos los géneros musicales." },
+  { icon: Truck, title: "Operación y Logística", desc: "Gestión integral de recintos, permisos, seguridad, servicios auxiliares y todo lo necesario para tu evento." },
+  { icon: TrendingUp, title: "Marketing y Difusión", desc: "Campañas digitales, redes sociales, relaciones públicas y medios tradicionales para posicionar tu evento." },
   { icon: Handshake, title: "Alianzas con Marcas", desc: "Espacios de patrocinio y activacion de marca dentro de eventos masivos. Conecta tu marca con miles de personas." },
 ];
 
 const pasos = [
-  { num: "01", title: "Planeacion", desc: "Definimos el concepto, presupuesto, fecha y recinto ideal para tu evento." },
-  { num: "02", title: "Produccion", desc: "Coordinamos todos los aspectos tecnicos, artisticos y logisticos." },
-  { num: "03", title: "Promocion", desc: "Lanzamos la campana de marketing y abrimos la venta de boletos." },
-  { num: "04", title: "Ejecucion", desc: "El gran dia. Nuestro equipo esta en cada detalle para una experiencia impecable." },
+  { num: "01", title: "Planeación", desc: "Definimos el concepto, presupuesto, fecha y recinto ideal para tu evento." },
+  { num: "02", title: "Producción", desc: "Coordinamos todos los aspectos técnicos, artísticos y logísticos." },
+  { num: "03", title: "Promoción", desc: "Lanzamos la campaña de marketing y abrimos la venta de boletos." },
+  { num: "04", title: "Ejecución", desc: "El gran día. Nuestro equipo está en cada detalle para una experiencia impecable." },
 ];
 
 const beneficiosVIP = [
@@ -236,7 +236,7 @@ export default function Servicios() {
                 href="/contacto"
                 className="inline-flex gradient-accent text-white font-semibold px-6 py-3 rounded-lg hover:shadow-glow transition-all duration-300 hover:scale-[1.02]"
               >
-                Solicitar informacion
+                Solicitar información
               </a>
             </motion.div>
           </div>

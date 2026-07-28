@@ -9,9 +9,11 @@ interface EventoCardProps {
 
 const estadoLabels = {
   disponible: "Boletos Disponibles",
-  proximamente: "Proximamente",
+  proximamente: "Próximamente",
   agotado: "Sold Out",
   pospuesto: "Pospuesto",
+  finalizado: "Evento Finalizado",
+  cancelado: "Cancelado",
 };
 
 const estadoColors = {
@@ -19,6 +21,8 @@ const estadoColors = {
   proximamente: "bg-showcase-accent/20 text-showcase-accent border-showcase-accent/30",
   agotado: "bg-red-500/20 text-red-400 border-red-500/30",
   pospuesto: "bg-gray-500/20 text-gray-400 border-gray-500/30",
+  finalizado: "bg-gray-700/20 text-gray-300 border-gray-700/30",
+  cancelado: "bg-red-700/20 text-red-300 border-red-700/30",
 };
 
 export default function EventoCard({ evento, index = 0 }: EventoCardProps) {

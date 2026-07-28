@@ -16,23 +16,23 @@ const artistasDestacados = artistas.slice(0, 12);
 const servicios = [
   {
     icon: Mic2,
-    title: "Produccion de Conciertos",
-    desc: "Conceptualizacion, produccion tecnica, logistica y ejecucion de conciertos de cualquier escala.",
+    title: "Producción de Conciertos",
+    desc: "Conceptualización, producción técnica, logística y ejecución de conciertos de cualquier escala.",
   },
   {
     icon: Megaphone,
-    title: "Promocion de Espectaculos",
-    desc: "Estrategias de marketing, publicidad y difusion para maximizar alcance y venta de boletos.",
+    title: "Promoción de Espectáculos",
+    desc: "Estrategias de marketing, publicidad y difusión para maximizar alcance y venta de boletos.",
   },
   {
     icon: FerrisWheel,
-    title: "Organizacion de Ferias",
-    desc: "Planeacion, coordinacion y operacion de ferias municipales y estatales.",
+    title: "Organización de Ferias",
+    desc: "Planeación, coordinación y operación de ferias municipales y estatales.",
   },
   {
     icon: Users,
-    title: "Contratacion de Artistas",
-    desc: "Relacion directa con artistas nacionales e internacionales de todos los generos.",
+    title: "Contratación de Artistas",
+    desc: "Relación directa con artistas nacionales e internacionales de todos los géneros.",
   },
 ];
 
@@ -72,9 +72,9 @@ export default function Home() {
           >
             Los mejores
             <br />
-            <span className="text-gradient-accent">conciertos y espectaculos</span>
+            <span className="text-gradient-accent">conciertos y espectáculos</span>
             <br />
-            en Mexico
+            en México
           </motion.h1>
 
           <motion.p
@@ -83,7 +83,7 @@ export default function Home() {
             transition={{ duration: 0.7, delay: 0.6 }}
             className="mt-6 text-showcase-text-secondary text-lg max-w-xl mx-auto leading-relaxed"
           >
-            Produccion, promocion y organizacion de conciertos, ferias, eventos culturales, deportivos y especiales.
+            Producción, promoción y organización de conciertos, ferias, eventos culturales, deportivos y especiales.
           </motion.p>
 
           <motion.div
@@ -123,9 +123,9 @@ export default function Home() {
       <section className="section-padding bg-showcase-bg-primary">
         <div className="container-max">
           <SectionHeader
-            label="PROXIMAS FECHAS"
-            title="No te pierdas los proximos eventos"
-            description="Conciertos, ferias y espectaculos para todos los gustos. Compra tus boletos ahora."
+            label="PRÓXIMAS FECHAS"
+            title="No te pierdas los próximos eventos"
+            description="Conciertos, ferias y espectáculos para todos los gustos. Compra tus boletos ahora."
           />
 
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -185,17 +185,17 @@ export default function Home() {
                 SOBRE NOSOTROS
               </span>
               <h2 className="font-clash font-semibold text-2xl lg:text-3xl text-white leading-tight mb-4">
-                Mas de una decada creando experiencias inolvidables
+                Más de una década creando experiencias inolvidables
               </h2>
               <p className="text-showcase-text-secondary leading-relaxed mb-6">
-                Showcase Entretenimiento es una empresa mexicana originaria de Torreon, Coahuila, especializada en la produccion, promocion y organizacion de conciertos, ferias, eventos culturales, deportivos y especiales. Hemos llevado a escenarios de todo Mexico a artistas internacionales como Shakira, Guns N' Roses y Andrea Bocelli.
+                Showcase Entretenimiento es una empresa mexicana originaria de Torreón, Coahuila, especializada en la producción, promoción y organización de conciertos, ferias, eventos culturales, deportivos y especiales. Hemos llevado a escenarios de todo México a artistas internacionales como Shakira, Guns N' Roses y Andrea Bocelli.
               </p>
 
               {/* Metrics */}
               <div className="grid grid-cols-3 gap-4 mb-6">
                 {[
                   { number: "10+", label: "Anos de trayectoria" },
-                  { number: "200+", label: "Eventos producidos" },
+                  { number: "500+", label: "Eventos producidos" },
                   { number: "30K", label: "Maxima asistencia" },
                 ].map((metric, i) => (
                   <motion.div
@@ -275,13 +275,13 @@ export default function Home() {
                 </span>
               </div>
               <h2 className="font-clash font-bold text-white leading-tight mb-2" style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}>
-                Feria Torreon <span className="text-gradient-gold">2025</span>
+                Feria Torreón <span className="text-gradient-gold">2025</span>
               </h2>
               <p className="text-showcase-text-secondary mb-4">
-                79ª Edicion — 5 de septiembre al 5 de octubre
+                79ª Edición — 5 de septiembre al 5 de octubre
               </p>
               <p className="text-showcase-text-secondary leading-relaxed mb-6">
-                Un mes completo de musica, diversion, gastronomia y tradicion en el corazon de La Laguna. Conciertos gratuitos con tu boleto de feria, espectaculos de paga con los mejores artistas, juegos mecanicos, gastronomia y actividades para toda la familia.
+                Un mes completo de música, diversión, gastronomía y tradición en el corazón de La Laguna. Conciertos gratuitos con tu boleto de feria, espectáculos de paga con los mejores artistas, juegos mecánicos, gastronomía y actividades para toda la familia.
               </p>
 
               <ul className="space-y-3 mb-8">
@@ -327,7 +327,7 @@ export default function Home() {
               <div className="relative rounded-2xl overflow-hidden shadow-card-hover">
                 <img
                   src="/feria-torreon.jpg"
-                  alt="Feria Torreon 2025"
+                  alt="Feria Torreón 2025"
                   className="w-full h-auto object-cover"
                   loading="lazy"
                 />

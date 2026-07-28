@@ -9,11 +9,11 @@ import PageHero from "../components/PageHero";
 
 const tiposSolicitud = [
   "Compra de boletos",
-  "Contratacion de artistas",
+  "Contratación de artistas",
   "Patrocinios / Alianzas comerciales",
-  "Produccion de eventos",
+  "Producción de eventos",
   "Prensa / Medios",
-  "Informacion general",
+  "Información general",
   "Otro",
 ];
 
@@ -21,14 +21,14 @@ const contactosEspecializados = [
   {
     icon: Mic2,
     title: "Eres artista o productor?",
-    text: "Escribenos sobre contrataciones, giras y colaboraciones artisticas.",
+    text: "Escríbenos sobre contrataciones, giras y colaboraciones artísticas.",
     cta: "Enviar correo",
   },
   {
     icon: Briefcase,
-    title: "Quieres patrocinar un evento?",
+    title: "¿Quieres patrocinar un evento?",
     text: "Conecta tu marca con miles de personas. Tenemos opciones para todos los presupuestos.",
-    cta: "Solicitar informacion",
+    cta: "Solicitar información",
   },
   {
     icon: Newspaper,
@@ -83,7 +83,7 @@ export default function Contacto() {
               className="lg:col-span-3"
             >
               <h2 className="font-clash font-semibold text-2xl text-white mb-2">
-                Envianos un mensaje
+                Envíanos un mensaje
               </h2>
               <p className="text-showcase-text-secondary mb-8">
                 Completa el formulario y te responderemos lo antes posible.
@@ -120,7 +120,7 @@ export default function Contacto() {
                     </div>
                     <div>
                       <label className="block text-sm text-showcase-text-secondary mb-1.5">
-                        Correo electronico <span className="text-showcase-accent">*</span>
+                        Correo electrónico <span className="text-showcase-accent">*</span>
                       </label>
                       <input
                         type="email"
@@ -137,7 +137,7 @@ export default function Contacto() {
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
                       <label className="block text-sm text-showcase-text-secondary mb-1.5">
-                        Telefono
+                        Teléfono
                       </label>
                       <input
                         type="tel"
@@ -191,7 +191,7 @@ export default function Contacto() {
                       rows={5}
                       value={formData.mensaje}
                       onChange={handleChange}
-                      placeholder="Cuentanos en que podemos ayudarte..."
+                      placeholder="¿Cómo podemos ayudarte?"
                       className="w-full bg-showcase-bg-card border border-showcase-border-subtle rounded-lg px-4 py-3 text-white placeholder:text-showcase-text-muted focus:outline-none focus:border-showcase-accent transition-colors resize-none"
                     />
                   </div>
@@ -227,9 +227,9 @@ export default function Contacto() {
                       <Mail className="w-5 h-5 text-showcase-accent" />
                     </div>
                     <div>
-                      <span className="text-showcase-text-muted text-xs uppercase tracking-wider">Correo electronico</span>
+                      <span className="text-showcase-text-muted text-xs uppercase tracking-wider">Correo electrónico</span>
                       <a href="mailto:eventosshowcase@gmail.com" className="block text-white hover:text-showcase-accent transition-colors">
-                        eventosshowcase@gmail.com
+                        Por confirmar
                       </a>
                     </div>
                   </div>
@@ -239,7 +239,7 @@ export default function Contacto() {
                       <Phone className="w-5 h-5 text-showcase-accent" />
                     </div>
                     <div>
-                      <span className="text-showcase-text-muted text-xs uppercase tracking-wider">Telefono</span>
+                      <span className="text-showcase-text-muted text-xs uppercase tracking-wider">Teléfono</span>
                       <p className="text-showcase-text-secondary">Por confirmar</p>
                     </div>
                   </div>
@@ -250,7 +250,7 @@ export default function Contacto() {
                     </div>
                     <div>
                       <span className="text-showcase-text-muted text-xs uppercase tracking-wider">WhatsApp</span>
-                      <p className="text-showcase-text-secondary">Disponible proximamente</p>
+                      <p className="text-showcase-text-secondary">Disponible próximamente</p>
                     </div>
                   </div>
 
@@ -260,7 +260,7 @@ export default function Contacto() {
                     </div>
                     <div>
                       <span className="text-showcase-text-muted text-xs uppercase tracking-wider">Oficina principal</span>
-                      <p className="text-showcase-text-secondary">Torreon, Coahuila, Mexico</p>
+                      <p className="text-showcase-text-secondary">Torreón, Coahuila, México</p>
                     </div>
                   </div>
 
@@ -277,7 +277,7 @@ export default function Contacto() {
 
                 <div className="border-t border-showcase-border-subtle mt-8 pt-6">
                   <span className="text-showcase-text-muted text-xs uppercase tracking-wider block mb-4">
-                    Siguenos
+                    Síguenos
                   </span>
                   <div className="flex items-center gap-3">
                     {[
@@ -303,7 +303,7 @@ export default function Contacto() {
                 {/* Corporate emails suggestion */}
                 <div className="border-t border-showcase-border-subtle mt-6 pt-6">
                   <span className="text-showcase-text-muted text-xs uppercase tracking-wider block mb-3">
-                    Emails corporativos (sugeridos)
+                    Emails corporativos
                   </span>
                   <div className="space-y-1.5">
                     {["contacto@showcasemx.com", "comercial@showcasemx.com", "prensa@showcasemx.com"].map((email) => (
@@ -322,7 +322,7 @@ export default function Contacto() {
         <div className="container-max">
           <div className="text-center mb-10">
             <span className="text-xs font-semibold tracking-[0.15em] uppercase text-showcase-accent mb-3 block">
-              COMO PODEMOS AYUDARTE?
+              ¿CÓMO PODEMOS AYUDARTE?
             </span>
             <h2 className="font-clash font-semibold text-2xl lg:text-3xl text-white">
               Encuentra el contacto adecuado
@@ -370,10 +370,10 @@ export default function Contacto() {
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="font-clash font-semibold text-xl lg:text-2xl text-white mb-3">
-                  No te pierdas ningun evento
+                  No te pierdas ningún evento
                 </h3>
                 <p className="text-showcase-text-secondary text-sm leading-relaxed">
-                  Suscríbete y recibe antes que nadie las noticias sobre proximos conciertos, preventas exclusivas y promociones especiales.
+                  Suscríbete y recibe antes que nadie las noticias sobre próximos conciertos, preventas exclusivas y promociones especiales.
                 </p>
               </div>
               <div>
@@ -402,8 +402,8 @@ export default function Contacto() {
       {/* Map */}
       <section className="h-80 lg:h-96 bg-showcase-bg-secondary">
         <iframe
-          title="Ubicacion ShowcaseMX"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115467.094834冲击!2d-103.479!3d25.548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x868fdb6b0c123456%3A0xabcdef1234567890!2sTorreon%2C%20Coah.!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx"
+          title="Ubicacion Showcase Entretenimiento"
+          src="https://maps.app.goo.gl/cDiJGjKfkrAPV3fR9"
           width="100%"
           height="100%"
           style={{ border: 0, filter: "grayscale(100%) invert(92%) contrast(83%)" }}

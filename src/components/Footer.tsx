@@ -15,7 +15,7 @@ const recintos = [
   "Coliseo Centenario",
   "Poliforum Torreón",
   "Explanada de la Feria",
-  "Estadio de Beisbol",
+  "Estadio Revolución",
 ];
 
 const socialLinks = [
@@ -41,7 +41,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-showcase-text-secondary text-sm leading-relaxed max-w-xs">
-              Empresa mexicana lider en produccion y promocion de conciertos, ferias y eventos masivos.
+              Empresa mexicana líder en producción y promoción de conciertos, ferias y eventos masivos.
             </p>
           </div>
 
@@ -76,7 +76,7 @@ export default function Footer() {
 
           {/* Social & Contact */}
           <div>
-            <h4 className="font-clash font-semibold text-white mb-4">Siguenos</h4>
+            <h4 className="font-clash font-semibold text-white mb-4">Síguenos</h4>
             <div className="flex items-center gap-3 mb-6">
               {socialLinks.map((social) => (
                 <a
@@ -107,7 +107,7 @@ export default function Footer() {
         <div className="border-t border-showcase-border-subtle mt-12 pt-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-showcase-text-muted text-xs">
-              © 2026 ShowcaseMX. Todos los derechos reservados.
+              © 2026 Showcase Entretenimiento. Todos los derechos reservados.
             </p>
             <div className="flex items-center gap-4 text-xs text-showcase-text-muted">
               <span className="hover:text-showcase-text-secondary cursor-pointer transition-colors">
