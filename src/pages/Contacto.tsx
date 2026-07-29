@@ -17,7 +17,7 @@ const tiposSolicitud = [
   "Otro",
 ];
 
-const contactEmail = "eventosshowcase@gmail.com";
+const contactEmail = "";
 
 const contactosEspecializados = [
   {

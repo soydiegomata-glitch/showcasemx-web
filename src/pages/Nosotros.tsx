@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import { Target, Eye, Heart, MapPin, Users } from "lucide-react";
+import {
+  MapPin,
+  Target,
+  Eye,
+  Heart,
+  Users,
+  Camera,
+} from "lucide-react";
 import PageHero from "../components/PageHero";
 import SectionHeader from "../components/SectionHeader";
 
@@ -28,6 +35,24 @@ const recintos = [
   { nombre: "Poliforum Torreón", ciudad: "Torreón, Coah.", capacidad: "5,000 personas", imagen: "/hero-concert.jpg" },
   { nombre: "Plaza de Toros", ciudad: "Torreón & Cancún", capacidad: "4,000-6,000", imagen: "/about-arena.jpg" },
   { nombre: "Estadio TSM", ciudad: "Torreón, Coah.", capacidad: "30,000 personas", imagen: "/hero-concert.jpg" },
+];
+
+const equipo = [
+  { nombre: "Jorge Mata Carlos", puesto: "Director Ejecutivo / Co-fundador", foto: "" },
+  { nombre: "Carlos Gomez", puesto: "Dirección de Operaciones / Co-fundador", foto: "" },
+  { nombre: "", puesto: "", foto: "" },
+  { nombre: "", puesto: "", foto: "" },
+  { nombre: "", puesto: "", foto: "" },
+  { nombre: "", puesto: "", foto: "" },
+  { nombre: "", puesto: "", foto: "" },
+  { nombre: "", puesto: "", foto: "" },
+  { nombre: "", puesto: "", foto: "" },
+  { nombre: "", puesto: "", foto: "" },
+  { nombre: "", puesto: "", foto: "" },
+  { nombre: "", puesto: "", foto: "" },
+  { nombre: "", puesto: "", foto: "" },
+  { nombre: "", puesto: "", foto: "" },
+  { nombre: "", puesto: "", foto: "" },
 ];
 
 export default function Nosotros() {
@@ -86,6 +111,53 @@ export default function Nosotros() {
                 </p>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Equipo */}
+      <section className="section-padding bg-showcase-bg-secondary">
+        <div className="container-max">
+          <SectionHeader
+            label="NUESTRO EQUIPO"
+            title="Las personas detrás de cada experiencia"
+            description="Un equipo apasionado que convierte cada idea en un espectáculo inolvidable."
+          />
+
+          <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5 lg:gap-6">
+            {equipo.map((persona, i) => (
+              <motion.article
+                key={persona.puesto}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: (i % 5) * 0.08 }}
+                className="group overflow-hidden rounded-xl border border-showcase-border-subtle bg-showcase-bg-card transition-all duration-300 hover:-translate-y-1 hover:border-showcase-accent/40"
+              >
+                <div className="relative aspect-[4/5] bg-gradient-to-br from-showcase-bg-elevated via-showcase-bg-card to-showcase-accent/20">
+                  {persona.foto ? (
+                    <img
+                      src={persona.foto}
+                      alt={persona.nombre}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-showcase-text-muted transition-colors duration-300 group-hover:text-showcase-accent">
+                      <Camera className="h-7 w-7" aria-hidden="true" />
+                      <span className="text-[10px] font-semibold uppercase tracking-[0.16em]">Foto próximamente</span>
+                    </div>
+                  )}
+                  <span className="absolute left-3 top-3 rounded-full border border-white/10 bg-showcase-bg-primary/70 px-2 py-1 text-[10px] font-medium text-showcase-text-secondary backdrop-blur">
+                    Equipo Showcase
+                  </span>
+                </div>
+                <div className="p-4">
+                  <h3 className="font-clash text-base font-semibold text-white">{persona.nombre}</h3>
+                  <p className="mt-1 text-xs leading-relaxed text-showcase-accent">{persona.puesto}</p>
+                </div>
+              </motion.article>
+            ))}
           </div>
         </div>
       </section>

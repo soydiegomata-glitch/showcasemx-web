@@ -15,7 +15,7 @@ export default function Legal({ type }: LegalProps) {
         <article className="container-max max-w-4xl space-y-8 text-showcase-text-secondary leading-relaxed">
           <p className="text-sm">Última actualización: 28 de julio de 2026.</p>
           {privacy ? <PrivacyContent /> : <TermsContent />}
-          <p>Para cualquier duda relacionada con este sitio, escríbenos a <a className="text-showcase-accent underline" href="mailto:eventosshowcase@gmail.com">eventosshowcase@gmail.com</a>.</p>
+          <p>Para cualquier duda relacionada con este sitio, escríbenos a <a className="text-showcase-accent underline" href="mailto:">gmail.com</a>.</p>
         </article>
       </section>
     </div>

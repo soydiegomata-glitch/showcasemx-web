@@ -334,11 +334,11 @@ export default function Home() {
                 Escribenos
               </Link>
               <a
-                href="mailto:eventosshowcase@gmail.com"
+                href="mailto:"
                 className="flex items-center gap-2 bg-transparent border border-showcase-border-subtle text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-showcase-bg-elevated hover:border-showcase-accent transition-all duration-300"
               >
                 <Mail className="w-5 h-5" />
-                eventosshowcase@gmail.com
+                @gmail.com
               </a>
             </div>
           </motion.div>

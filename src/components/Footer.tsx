@@ -94,10 +94,10 @@ export default function Footer() {
             <div>
               <span className="text-showcase-text-muted text-xs uppercase tracking-wider">Email</span>
               <a
-                href="mailto:eventosshowcase@gmail.com"
+                href="mailto:"
                 className="block text-showcase-text-secondary text-sm hover:text-showcase-accent transition-colors"
               >
-                eventosshowcase@gmail.com
+                e
               </a>
             </div>
           </div>
